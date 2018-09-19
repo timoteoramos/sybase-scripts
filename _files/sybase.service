@@ -1,0 +1,12 @@
+[Unit]
+Description=Sybase Service
+
+[Service]
+Type=simple
+User=sybase
+WorkingDirectory=/var/lib/sybase
+ExecStart=/opt/sybase-scripts/bin/runserver.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
